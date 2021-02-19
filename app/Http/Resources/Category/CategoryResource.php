@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Resources\Resources;
+namespace App\Http\Resources\Category;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class ProfileResource extends JsonResource
+class CategoryResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -16,9 +16,11 @@ class ProfileResource extends JsonResource
     {
         return [
             'id' => $this->id,
-            'barangay' => $this->barangay,
-            'purok' => $this->purok,
-            'phone' => $this->phone,
+            'name' => $this->name,
+            'detail' => $this->detail,
+            'href' => [
+                'products' => route('products.index',$this->id)
+            ]
         ];
     }
 }

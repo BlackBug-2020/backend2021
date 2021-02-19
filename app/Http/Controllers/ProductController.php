@@ -21,9 +21,10 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Category $category)
     {
-        return ProductCollection::collection(Product::paginate(20));
+        // return ProductCollection::collection(Product::paginate(20));
+        return ProductResource::collection($category->products);
     }
 
     /**
