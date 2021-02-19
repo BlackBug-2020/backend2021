@@ -24,4 +24,7 @@ Route::group(['prefix'=>'products'],function(){
     Route::apiResource('/{product}/reviews','App\Http\Controllers\ReviewController');
 });
 
-Route::apiResource('/profile','App\Http\Controllers\ProfileController');
+Route::apiResource('/categories','App\Http\Controllers\CategoryController');
+Route::group(['prefix'=>'categories'],function(){
+    Route::apiResource('/{category}/products','App\Http\Controllers\ProductController');
+});
