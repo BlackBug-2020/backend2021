@@ -162,11 +162,6 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Laravel\Passport\PassportServiceProvider::class,
-<<<<<<< HEAD
-=======
-       
->>>>>>> 0e9ed586aa9d835fef8c8b695e99ad0dc3065bbc
-
         /*
          * Package Service Providers...
          */
